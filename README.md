@@ -54,7 +54,7 @@ Planned evaluation metrics:
 ## Related Work
 
 Web-Pentest Toolkit (attack generator):  
-https://github.com/YourGitHub/web-pentest-toolkit
+[https://github.com/YourGitHub/web-pentest-toolkit](https://github.com/Lanex69/vulnerability-scanner)
 
 ---
 
