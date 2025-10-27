@@ -24,6 +24,10 @@ Develop a reproducible and research-driven SOC testbed to:
 | Wazuh Manager | SIEM and host telemetry analysis | In progress |
 | Zeek | Network monitoring and log enrichment | Planned |
 | Elastic Stack | Search, log indexing, dashboards | Planned |
+## Architecture
+
+![SOC Architecture Diagram](images/architecture.png)
+
 
 ---
 
