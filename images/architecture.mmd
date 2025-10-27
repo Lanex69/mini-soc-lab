@@ -1,20 +1,24 @@
 flowchart LR
-  subgraph InternalNetwork["Internal Network"]
-    A[Parrot Attacker]
-    B[Windows 10 Victim - Sysmon + Wazuh Agent]
-    Z[Zeek Sensor optional]
+  subgraph Internal_Network["Internal Network (isolated)"]
+    A["Parrot (Attacker)"]
+    B["Windows 10 (Victim)<br/>(Sysmon + Wazuh Agent)"]
+    Z["Zeek Sensor (optional)"]
+    WazuhAgent["Wazuh Agent"]
+    A --- B
+    A -->|"Attack traffic / probes"| Z
+    B -->|"Host events (Sysmon)"| WazuhAgent
   end
 
-  subgraph SIEM["SIEM VM (Xubuntu) - NIC1: Internal, NIC2: NAT]
-    W[Wazuh Manager]
-    E[Elastic Stack]
+  subgraph SIEM_VM["SIEM VM (Xubuntu)<br/>Primary NIC: Internal | Secondary NIC: NAT (Internet)"]
+    W["Wazuh Manager"]
+    E["Elastic Stack<br/>(Elasticsearch + Kibana)"]
     W --> E
   end
 
-  A -->|Attack traffic| B
-  A -->|Probes| Z
-  B -->|Host events| W
-  Z -->|Zeek logs| E
+  %% Data flows to SIEM
+  Z -->|"Zeek logs (conn/http/dns) via Filebeat/Logstash"| E
+  WazuhAgent -->|"Agent auth + alerts"| W
 
-  SIEM -.->|Package updates| Internet
-  Internet((Internet))
+  %% SIEM internet access
+  Internet(("Internet"))
+  SIEM_VM -. "NAT" .-> Internet
