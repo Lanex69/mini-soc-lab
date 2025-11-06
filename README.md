@@ -14,6 +14,10 @@ Develop a reproducible and research-driven SOC testbed to:
 4. Explore improvements in detection accuracy and analyst efficiency
 
 ---
+## License
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+---
 
 ## Current Lab Architecture
 
