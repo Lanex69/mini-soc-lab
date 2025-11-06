@@ -1,6 +1,6 @@
 # Mini SOC Research Testbed
 
-This project aims to build a practical Security Operations Center (SOC) lab environment to study and improve alert prioritization and false-positive reduction using Zeek, Wazuh, and Elastic Stack. The environment also integrates a custom Python web-pentest tool to generate realistic network and host telemetry.
+Security Telemetry Engine is a reproducible SOC testbed that generates attack telemetry, correlates Zeek and Wazuh alerts in Elastic, and measures false-positive reduction, detection latency, and alert volume. The environment also integrates a custom Python web-pentest tool to generate realistic network and host telemetry.
 
 ---
 
