@@ -65,7 +65,7 @@ The primary research areas include:
 
 | Attack | Description | Status | Detection |
 |---------|--------------|---------|-----------|
-| SSH Brute Force | Hydra-based SSH brute force | Completed | Detected via Wazuh rule |
+| SSH Brute Force | Hydra-based SSH brute force | Planned | Pending|
 | Directory Fuzzing | Gobuster-based web enumeration | In progress | Pending |
 | DNS Tunneling | Data exfiltration via nslookup or iodine | Planned | Pending |
 | Privilege Escalation | PowerShell-based local privilege escalation | Planned | Pending |
