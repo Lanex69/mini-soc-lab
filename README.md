@@ -35,7 +35,7 @@ Next milestone: Deploy Zeek sensor and forward logs via Filebeat to Elastic.
 
 ## Architecture Overview
 
-![SOC Architecture Diagram](images/architecture_v1.png)
+![SOC Architecture Diagram](images/architecture.png)
 
 **Network topology**  
 - Internal network (10.0.0.0/24) for telemetry collection  
